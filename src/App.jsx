@@ -1,7 +1,13 @@
 import { createTheme, ThemeProvider } from "@mui/material";
 
 import Header from "./pages/header/Header";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  BrowserRouter,
+  createBrowserRouter,
+  Route,
+  RouterProvider,
+  Routes
+} from "react-router-dom";
 import Home from "./pages/home/Home";
 import Services from "./pages/services/Services";
 import About from "./pages/about/About";
@@ -17,16 +23,17 @@ const theme = createTheme({
 });
 
 function App() {
-  const router = createBrowserRouter([
-    { path: "/", element: <Home /> },
-    { path: "/about", element: <About /> },
-    { path: "/services", element: <Services /> },
-    { path: "/contacts", element: <Contact /> }
-  ]);
   return (
     <ThemeProvider theme={theme}>
-      <Header />
-      <RouterProvider router={router} />
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }

@@ -9,14 +9,20 @@ import {
   Menu,
   MenuItem,
   Typography,
-  Button,
-  Link
+  Button
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 
 import Logo from "../../assets/logo.png";
 import React, { useState } from "react";
-import { Link as RouterLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+
+const pages = [
+  { id: 1, label: "Home", link: "/" },
+  { id: 2, label: "About", link: "/about" },
+  { id: 3, label: "Services", link: "/services" },
+  { id: 4, label: "Contact", link: "/contact" }
+];
 
 const Header = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -57,13 +63,21 @@ const Header = () => {
               transformOrigin={{ vertical: "top", horizontal: "right" }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
-              sx={{ display: { xs: "block", md: "none" } }}
+              sx={{
+                display: { xs: "block", md: "none" }
+              }}
             >
-              <MenuItem onClick={handleCloseNavMenu}>
-                <Link component={RouterLink} to="/" textAlign="center">
-                  Home
-                </Link>
-              </MenuItem>
+              {pages.map((page) => (
+                <MenuItem key={page.id} onClick={handleCloseNavMenu}>
+                  <Button
+                    component={Link}
+                    to={page.link}
+                    sx={{ color: "text.secondary" }}
+                  >
+                    {page.label}
+                  </Button>
+                </MenuItem>
+              ))}
             </Menu>
           </Box>
           <Box
@@ -83,14 +97,17 @@ const Header = () => {
               justifyContent: "center"
             }}
           >
-            <Link
-              component={RouterLink}
-              to="/"
-              onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: "text.secondary", display: "block" }}
-            >
-              Home
-            </Link>
+            {pages.map((page) => (
+              <Button
+                component={Link}
+                key={page.id}
+                to={page.link}
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: "text.secondary", display: "block" }}
+              >
+                {page.label}
+              </Button>
+            ))}
           </Box>
         </Toolbar>
       </Container>
