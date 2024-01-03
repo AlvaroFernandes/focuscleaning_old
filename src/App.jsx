@@ -1,40 +1,26 @@
-import { createTheme, ThemeProvider } from "@mui/material";
+import "./assets/scss/style.scss";
 
-import Header from "./pages/header/Header";
-import {
-  BrowserRouter,
-  createBrowserRouter,
-  Route,
-  RouterProvider,
-  Routes
-} from "react-router-dom";
-import Home from "./pages/home/Home";
-import Services from "./pages/services/Services";
-import About from "./pages/about/About";
-import Contact from "./pages/contact/Contact";
-
-const theme = createTheme({
-  palette: {
-    primary: { main: "#F2F1EB" }
-  },
-  text: {
-    secondary: "#46505A"
-  }
-});
+import { createBrowserHistory } from "history";
+import { useEffect } from "react";
+import { HashRouter, Route, Routes } from "react-router-dom";
+import WebFont from "webfontloader";
+import Home from "./views/Home/Home";
 
 function App() {
+  useEffect(() => {
+    WebFont.load({
+      google: {
+        families: ["Raleway"]
+      }
+    });
+  }, []);
+  var hist = createBrowserHistory();
   return (
-    <ThemeProvider theme={theme}>
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </BrowserRouter>
-    </ThemeProvider>
+    <HashRouter history={hist}>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </HashRouter>
   );
 }
 
