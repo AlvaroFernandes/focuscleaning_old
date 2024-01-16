@@ -1,13 +1,12 @@
-import React from "react";
-import Jumbotron from "../components/jumbotron/Jumbotron";
-import ServiceCards from "../components/serviceCards/ServiceCards";
+import { HeaderTop, HeaderArea, HeroArea } from "@/components";
 
 const Home = () => {
   return (
-    <div>
-      <Jumbotron />
-      <ServiceCards />
-    </div>
+    <>
+      <HeaderTop />
+      <HeaderArea />
+      <HeroArea type={true} />
+    </>
   );
 };
 

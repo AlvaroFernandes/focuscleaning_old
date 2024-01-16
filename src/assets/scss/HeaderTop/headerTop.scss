@@ -1,0 +1,36 @@
+.header-top {
+  background-color: $secondary-color;
+  font-size: 16px;
+  font-weight: 400;
+  color: $title-color;
+  padding: 20px 0;
+  .contact-info {
+    color: $title-color;
+    .icon {
+      color: $title-color;
+      font-size: 35px;
+      margin-right: 2px;
+    }
+  }
+  .site-info .social-area {
+    display: inline-block;
+    margin-left: 10px;
+    .icon {
+      font-size: 35px;
+      color: $title-color;
+      padding-left: 10px;
+    }
+  }
+}
+
+@media only screen and (min-width: 766px) and (max-width: 991px) {
+  .header-top {
+    display: none;
+  }
+}
+
+@media (max-width: 767) {
+  .header-top {
+    display: none;
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "promo": [
+    {
+      "id": "p1",
+      "heading": "Industrial Solution",
+      "title": "Industry is main lorem ipsum dolor amet, consectetur adipisicing elit.",
+      "icon": "flaticon-factory"
+    },
+    {
+      "id": "p2",
+      "heading": "Eco Development",
+      "title": "Industry is main lorem ipsum dolor amet, consectetur adipisicing elit.",
+      "icon": "flaticon-cogwheel"
+    },
+    {
+      "id": "p3",
+      "heading": "Modern Technology",
+      "title": "Industry is main lorem ipsum dolor amet, consectetur adipisicing elit.",
+      "icon": "flaticon-maintenance"
+    }
+  ]
+}

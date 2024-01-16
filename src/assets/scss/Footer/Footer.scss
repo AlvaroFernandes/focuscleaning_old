@@ -1,0 +1,64 @@
+.footer-area {
+  background: $secondary-color;
+  color: #000;
+  position: relative;
+  h5 {
+    font-family: $title-font;
+    font-size: 22px;
+    font-weight: 500;
+    color: $title-color;
+    margin: 20px 0;
+  }
+  p {
+    font-family: $text-font;
+    margin-top: 18px;
+    color: $text-color;
+    font-size: 17px;
+  }
+  ul li a {
+    font-family: $text-font;
+    font-size: 16px;
+    display: block;
+    color: $text-color;
+    padding: 10px 0;
+    position: relative;
+    &:hover {
+      color: $main-color;
+      padding-left: 25px;
+    }
+    span {
+      color: $main-color;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    &:before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 0;
+      width: 16px;
+      height: 3px;
+      background: $title-color;
+      visibility: hidden;
+      opacity: 0;
+    }
+    &:hover::before {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  .footer-up {
+    padding: 80px 0;
+    .social-area .icon {
+      color: $title-color;
+      font-size: 20px;
+      margin-right: 10px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-area ul li a {
+    padding: 6px 0;
+  }
+}
