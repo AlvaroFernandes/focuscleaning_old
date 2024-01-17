@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useOutletContext } from "react-router-dom";
-import logo from "@/assets/images/logos/logo.png";
+import "./header.css";
 import MobileMenu from "./MobileMenu";
 
 const HeaderArea = () => {
@@ -18,16 +17,16 @@ const HeaderArea = () => {
           className={`sticky-area ${scrolled ? "header__fixed is-sticky" : ""}`}
         >
           <div className="navigation">
-            <Container>
-              <Row>
-                <Col className="lg-3">
+            <div className="container">
+              <div className="row">
+                <div className="col-lg-3">
                   <div className="logo">
                     <Link className="navbar-brand" to="/">
-                      <img src={logo} alt="Focus Cleaning" />
+                      <img src="/assets/img/logo.png" alt="Focus Cleaning" />
                     </Link>
                   </div>
-                </Col>
-                <Col className="lg-6">
+                </div>
+                <div className="col-lg-6">
                   <div className="main-menu">
                     <nav className="navbar navbar-expand-lg">
                       <button
@@ -50,38 +49,38 @@ const HeaderArea = () => {
                       >
                         <ul className="navbar-nav m-auto">
                           <li className="nav-item">
-                            <a
+                            <Link
+                              to="/"
                               onMouseOver={() => setActiveMenu("home")}
                               className={`nav-link ${
                                 activeMenu === "home" ? "active" : ""
                               }`}
-                              href="#"
                             >
                               Home
-                            </a>
+                            </Link>
                           </li>
                           <li className="nav-item">
-                            <a
+                            <Link
+                              to="/about"
                               onMouseOver={() => setActiveMenu("about")}
                               className={`nav-link ${
                                 activeMenu === "about" ? "active" : ""
                               }`}
-                              href="#"
                             >
                               About
-                            </a>
+                            </Link>
                           </li>
                           <li className="nav-item">
-                            <a
+                            <Link
+                              to="/services"
                               onMouseOver={() => setActiveMenu("services")}
                               className={`nav-link ${
                                 activeMenu === "services" ? "active" : ""
                               }`}
-                              href="#"
                             >
                               Services
                               <span className="sub-nav-toggler"></span>
-                            </a>
+                            </Link>
                             <ul className="sub-menu">
                               <li>
                                 <Link to="/services/basic">Basic Cleaning</Link>
@@ -129,9 +128,9 @@ const HeaderArea = () => {
                       <MobileMenu showNav={showNav} setShowNav={setShowNav} />
                     </nav>
                   </div>
-                </Col>
-              </Row>
-            </Container>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </header>

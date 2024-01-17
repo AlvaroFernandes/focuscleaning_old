@@ -1,5 +1,7 @@
-import useScrollingProgress from "@/hooks/useScrollingProgress";
+import useScrollingProgress from "../../hooks/useScrollingProgress";
 import CircularProgress from "./CircularProgress";
+
+import "./backToTop.css";
 
 const BackToTop = () => {
   const progress = useScrollingProgress();

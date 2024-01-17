@@ -1,4 +1,4 @@
-import { HeaderTop, HeaderArea, HeroArea } from "@/components";
+import { HeaderTop, HeaderArea, HeroArea, Cards } from "../components";
 
 const Home = () => {
   return (
@@ -6,6 +6,7 @@ const Home = () => {
       <HeaderTop />
       <HeaderArea />
       <HeroArea type={true} />
+      <Cards />
     </>
   );
 };

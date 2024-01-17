@@ -1,33 +1,43 @@
-import { Col, Container, Row } from "react-bootstrap";
-import { Envelope, Facebook, Instagram } from "react-bootstrap-icons";
+import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const HeaderTop = () => {
   return (
     <>
       <div className="header-top dark-bg">
-        <Container>
-          <Row>
-            <Col className="lg-6 md-12 sm-12">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6 col-md-12 col-sm-12">
               <div className="contact-info">
-                <Envelope className="icon" />
+                <FontAwesomeIcon
+                  icon={faEnvelope}
+                  className="header-top-icon"
+                />
                 contact@focuscleaningsydney.com.au
               </div>
-            </Col>
-            <Col className="lg-6 md-12 sm-12 text-end">
+            </div>
+            <div className="col-lg-6 col-md-12 col-sm-12 text-end">
               <div className="site-info">
                 <span>Give yourself a day off!</span>
                 <div className="social-area">
                   <a href="">
-                    <Facebook className="icon" />
+                    <FontAwesomeIcon
+                      icon={faFacebook}
+                      className="header-top-icon"
+                    />
                   </a>
                   <a href="">
-                    <Instagram className="icon" />
+                    <FontAwesomeIcon
+                      icon={faInstagram}
+                      className="header-top-icon"
+                    />
                   </a>
                 </div>
               </div>
-            </Col>
-          </Row>
-        </Container>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

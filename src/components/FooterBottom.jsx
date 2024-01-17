@@ -1,17 +1,15 @@
-import { Container, Row, Col } from "react-bootstrap";
-
 const FooterBottom = () => {
   return (
     <>
       <div className="footer-bottom">
-        <Container>
-          <Row className="justify-content-center align-items-center">
-            <Col className="lg-6 md-6 sm-12">
+        <div className="container">
+          <div className="row justify-content-center align-items-center justify-content-center">
+            <div className="col-lg-6 col-md-6 col-sm-12">
               <p className="copyright-line">
                 © 2024 Focus Cleaning. All rights reserved.
               </p>
-            </Col>
-            <Col className="lg-6 md-6 sm-12 text-end">
+            </div>
+            <div className="col-lg-6 col-md-6 col-sm-12">
               <p className="privacy">
                 Developed by:{" "}
                 <a
@@ -22,9 +20,9 @@ const FooterBottom = () => {
                   Alvaro Fernandes
                 </a>
               </p>
-            </Col>
-          </Row>
-        </Container>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

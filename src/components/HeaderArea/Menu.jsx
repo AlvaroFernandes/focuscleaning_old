@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { ChevronBarDown } from "react-bootstrap-icons";
+import { Link } from "react-router-dom";
 
 const Menu = ({ menu, setShowNav }) => {
-  console.log(menu);
   const [homeSubMenu, setHomeSubMenu] = useState(false);
 
   return (
@@ -17,7 +16,7 @@ const Menu = ({ menu, setShowNav }) => {
               className="mobile-sub-nav-toggler"
               onClick={() => setHomeSubMenu((p) => !p)}
             >
-              <ChevronBarDown />
+              <i className="las la-angle-down"></i>
             </button>
           )}
         </div>

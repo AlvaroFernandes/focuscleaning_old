@@ -1,8 +1,8 @@
 import { Outlet } from "react-router-dom";
 //utils
-import ScrollToTop from "@/utils/ScrollToTop";
-import useScroll from "@/hooks/useScroll";
-import { Preloader, Footer, FooterBottom, BackToTop } from "@/components";
+import ScrollToTop from "../utils/ScrollToTop";
+import useScroll from "../hooks/useScroll";
+import { Preloader, Footer, FooterBottom, BackToTop } from "../components";
 
 const Default = () => {
   const scrolled = useScroll();
@@ -12,6 +12,7 @@ const Default = () => {
       <Outlet context={[scrolled]} />
       <Footer />
       <FooterBottom />
+      <BackToTop />
     </ScrollToTop>
   );
 };

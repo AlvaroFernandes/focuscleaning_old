@@ -1,18 +1,18 @@
 import { useState, useEffect } from "react";
 
-const useGetData = (initialValue, link) => {
-  const [data, setData] = useState(initialValue);
+const useGetData = (initialState, urlData) => {
+  const [data, setData] = useState(initialState);
 
   useEffect(() => {
     let isMounted = true;
+
     const getData = async () => {
       try {
-        const req = await fetch(link);
+        const req = await fetch(urlData);
+
         const res = await req.json();
-        console.log(res);
-        if (isMounted) {
-          setData(res);
-        }
+
+        if (isMounted) setData(res);
       } catch (error) {
         console.log(error);
       }
@@ -21,7 +21,8 @@ const useGetData = (initialValue, link) => {
     return () => {
       isMounted = false;
     };
-  }, [link]);
+  }, []);
+
   return data;
 };
 

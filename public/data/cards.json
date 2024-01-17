@@ -1,0 +1,22 @@
+{
+  "cards": [
+    {
+      "id": "p1",
+      "heading": "Residencial Solution",
+      "title": "Industry is main lorem ipsum dolor amet, consectetur adipisicing elit.",
+      "icon": "flaticon-house"
+    },
+    {
+      "id": "p2",
+      "heading": "Commercial Solutions",
+      "title": "Industry is main lorem ipsum dolor amet, consectetur adipisicing elit.",
+      "icon": "flaticon-office"
+    },
+    {
+      "id": "p3",
+      "heading": "Constuction Solutions",
+      "title": "Industry is main lorem ipsum dolor amet, consectetur adipisicing elit.",
+      "icon": "flaticon-factory"
+    }
+  ]
+}
