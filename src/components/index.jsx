@@ -11,3 +11,5 @@ export { default as Breadcrumbs } from "./Breadcrumbs";
 export { default as AboutInfo } from "./aboutInfo/AboutInfo";
 export { default as Partners } from "./partners/Partners";
 export { default as ServicesInfo } from "./services/ServicesInfo";
+export { default as ServiceDetails } from "./services/ServiceDetails";
+export { default as Testimonial } from "./testimonial/Testimonial";

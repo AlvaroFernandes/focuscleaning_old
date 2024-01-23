@@ -2,7 +2,7 @@
   "banner": [
     {
       "id": "b1",
-      "img": "../assets/img/slider/1.jpg",
+      "img": "/assets/img/slider/1.jpg",
       "heading": "House Cleaning",
       "motive": {
         "m1": "We provide best satisfied",
@@ -11,11 +11,12 @@
       "title": {
         "t1": "Focus Cleaning Sydney is a professional and affordable home cleaning company",
         "t2": "With our team of amazing and well-trained cleaners, rest assured that no details will be ignored."
-      }
+      },
+      "link": "/services/basic"
     },
     {
       "id": "b2",
-      "img": "../assets/img/slider/2.jpeg",
+      "img": "/assets/img/slider/2.jpeg",
       "heading": "Commercial Cleaning",
       "motive": {
         "m1": "We maintain your",
@@ -24,7 +25,8 @@
       "title": {
         "t1": "Experienced, professional commercial cleaners specialising in offices. ",
         "t2": "Our team will leave a clean and organised environment, perfect for your workflow. "
-      }
+      },
+      "link": "/services/commercial"
     }
   ]
 }

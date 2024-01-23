@@ -3,38 +3,8 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import { Link } from "react-router-dom";
 
-const banner = [
-  {
-    id: "b1",
-    link: "/services/basic",
-    img: "/assets/img/slider/1.jpg",
-    heading: "House Cleaning",
-    motive: {
-      m1: "We provide best satisfied",
-      m2: "work for your house"
-    },
-    title: {
-      t1: "Focus Cleaning Sydney is a professional and affordable home cleaning company",
-      t2: "With our team of amazing and well-trained cleaners, rest assured that no details will be ignored."
-    }
-  },
-  {
-    id: "b2",
-    link: "/services/commercial",
-    img: "/assets/img/slider/2.jpeg",
-    heading: "Commercial Cleaning",
-    motive: {
-      m1: "We maintain your",
-      m2: "office in perfect state"
-    },
-    title: {
-      t1: "Experienced, professional commercial cleaners specialising in offices. ",
-      t2: "Our team will leave a clean and organised environment, perfect for your workflow. "
-    }
-  }
-];
-
-const HeroArea = ({ type }) => {
+const HeroArea = ({ type, data }) => {
+  const banner = data.banner;
   return (
     <>
       {banner.length > 0 && (
@@ -75,7 +45,7 @@ const HeroArea = ({ type }) => {
                           {item.title.t2}
                         </p>
                       </div>
-                      <Link to="/services/basic" className="main-btn">
+                      <Link to={item.link} className="main-btn">
                         Learn More
                       </Link>
                     </div>

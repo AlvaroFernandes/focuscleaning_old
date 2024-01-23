@@ -1,0 +1,28 @@
+{
+  "partners": [
+    {
+      "id": "p1",
+      "name": "Fighting Chance Australia",
+      "img": "/assets/img/partners/FCA.png",
+      "designation": "House Cleaning"
+    },
+    {
+      "id": "p2",
+      "name": "Absolute Environmental Services",
+      "img": "/assets/img/partners/AES.png",
+      "designation": "Construction Cleaning"
+    },
+    {
+      "id": "p3",
+      "name": "Plateau Trees",
+      "img": "/assets/img/partners/PT.png",
+      "designation": "Commercial Cleaning"
+    },
+    {
+      "id": "p4",
+      "name": "IPAR - Works insurance",
+      "img": "/assets/img/partners/IPAR.png",
+      "designation": "House Cleaning"
+    }
+  ]
+}

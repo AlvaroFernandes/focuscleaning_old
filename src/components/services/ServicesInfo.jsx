@@ -1,70 +1,81 @@
-import ServiceCard from "./ServiceCard";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
 
-const data = [
-  {
-    id: "s1",
-    img: "/assets/img/service/1.jpg",
-    icon: "flaticon-oil-industry",
-    heading: "Petrolieum Refinery",
-    title:
-      "There are some reason build erit a augue insuned image pellen simply freede in the site lorem ipsum dolor"
-  },
-  {
-    id: "s2",
-    img: "/assets/img/service/2.jpg",
-    icon: "flaticon-lab-tool",
-    heading: "Chemical Research",
-    title:
-      "There are some reason build erit a augue insuned image pellen simply freede in the site lorem ipsum dolor"
-  },
-  {
-    id: "s3",
-    img: "/assets/img/service/3.jpg",
-    icon: "flaticon-eco-factory",
-    heading: "Industrial Ecology",
-    title:
-      "There are some reason build erit a augue insuned image pellen simply freede in the site lorem ipsum dolor"
-  },
-  {
-    id: "s4",
-    img: "/assets/img/service/4.jpg",
-    icon: "flaticon-production",
-    heading: "Construction Industry",
-    title:
-      "There are some reason build erit a augue insuned image pellen simply freede in the site lorem ipsum dolor"
-  },
-  {
-    id: "s5",
-    img: "/assets/img/service/5.jpg",
-    icon: "flaticon-crane",
-    heading: "Civil Engineering",
-    title:
-      "There are some reason build erit a augue insuned image pellen simply freede in the site lorem ipsum dolor"
-  },
-  {
-    id: "s6",
-    img: "/assets/img/service/6.jpg",
-    icon: "flaticon-drilling-machine",
-    heading: "Mechanical Engineering",
-    title:
-      "There are some reason build erit a augue insuned image pellen simply freede in the site lorem ipsum dolor"
-  }
-];
+import { Link } from "react-router-dom";
 
-const ServicesInfo = () => {
+const ServicesInfo = ({ data }) => {
+  const services = data.Services;
   return (
-    <div className="service-area service-two gray-bg section-padding ">
+    <div className="service-area  gray-bg section-padding ">
       <div className="container">
-        <div className="row">
-          {data.length > 0 &&
-            data.map((service) => {
-              <div
-                key={service.id}
-                className="col-xl-4 col-lg-4 col-md-6 col-12"
+        <div className="row align-item-center position-relative">
+          <div className="col-xl-4">
+            <div className="section-title">
+              <h6>What We Do</h6>
+              <h2>What We Offer</h2>
+            </div>
+          </div>
+          <div className="col-xl-6">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+              iaculis finibus enim sed vestibulum. Vivamus eleifend ut leo sit
+              amet mattis. Proin mattis ipsum id metus efficitur, et
+              pellentesque elit malesuada.
+            </p>
+          </div>
+          <div className="slide__navigation position-relative">
+            <button className="slide__button-prev">
+              <i className="las la-arrow-left"></i>
+            </button>
+            <button className="slide__button-next">
+              <i className="las la-arrow-right"></i>
+            </button>
+          </div>
+          <div className="row">
+            <div className="col-xl-12">
+              <Swiper
+                speed={1500}
+                navigation={{
+                  nextEl: ".slide__button-next",
+                  prevEl: ".slide__button-prev"
+                }}
+                loop={true}
+                modules={[Pagination, Navigation]}
+                pagination={{ clickable: true }}
+                breakpoints={{
+                  0: {
+                    slidesPerView: 1
+                  },
+                  768: {
+                    slidesPerView: 2,
+                    spaceBetween: 50
+                  },
+                  1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 50
+                  }
+                }}
+                className="service-slider"
               >
-                <ServiceCard service={service} />
-              </div>;
-            })}
+                {services.map((service) => (
+                  <SwiperSlide key={service.id} className="single-service-item">
+                    <div className="service-icon">
+                      <span>
+                        <i className={service.icon}> </i>
+                      </span>
+                    </div>
+                    <div className="service-title">
+                      <h4>{service.heading}</h4>
+                    </div>
+                    <p>{service.title.substring(0, 50) + "..."}</p>
+                    <Link to={service.link} className="service-link">
+                      <i className="las la-long-arrow-alt-right"></i>
+                    </Link>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+          </div>
         </div>
       </div>
     </div>

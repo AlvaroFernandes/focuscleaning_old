@@ -1,33 +1,8 @@
 import { PartnerCard } from "./PartnerCard";
 
-const data = [
-  {
-    id: "p1",
-    name: "Fighting Chance Australia",
-    img: "/assets/img/partners/FCA.png",
-    designation: "House Cleaning"
-  },
-  {
-    id: "p2",
-    name: "Absolute Environmental Services",
-    img: "/assets/img/partners/AES.png",
-    designation: "Construction Cleaning"
-  },
-  {
-    id: "p3",
-    name: "Plateau Trees",
-    img: "/assets/img/partners/PT.png",
-    designation: "Commercial Cleaning"
-  },
-  {
-    id: "p4",
-    name: "IPAR - Works insurance",
-    img: "/assets/img/partners/IPAR.png",
-    designation: "House Cleaning"
-  }
-];
+const Partners = ({ type, data }) => {
+  const partners = data.partners;
 
-const Partners = ({ type }) => {
   const index = (i) => {
     let k = i + 2;
     if (type && k > 5) {
@@ -53,8 +28,8 @@ const Partners = ({ type }) => {
           </div>
         ) : null}
         <div className="row">
-          {data.length > 0 &&
-            (!type ? data : data.slice(0, 4)).map((item, i) => (
+          {partners.length > 0 &&
+            (!type ? partners : partners.slice(0, 4)).map((item, i) => (
               <div
                 key={item.id}
                 className="col-lg-3 col-md-6 wow fadeInLeft"

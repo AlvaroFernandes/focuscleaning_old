@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Home, About, Services } from "../pages";
+import { Home, About, Services, InternalPage } from "../pages";
 import { ErrorPage } from "../components";
 import { Default } from "../Layout";
 
@@ -10,7 +10,37 @@ export const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home />, errorElement: <ErrorPage /> },
       { path: "/about", element: <About />, errorElement: <ErrorPage /> },
-      { path: "/services", element: <Services />, errorElement: <ErrorPage /> }
+      { path: "/services", element: <Services />, errorElement: <ErrorPage /> },
+      {
+        path: "/services/basic",
+        element: <InternalPage page="basic" />,
+        errorElement: <ErrorPage />
+      },
+      {
+        path: "/services/commercial",
+        element: <InternalPage page="commercial" />,
+        errorElement: <ErrorPage />
+      },
+      {
+        path: "/services/construction",
+        element: <InternalPage page="construction" />,
+        errorElement: <ErrorPage />
+      },
+      {
+        path: "/services/premiun",
+        element: <InternalPage page="premiun" />,
+        errorElement: <ErrorPage />
+      },
+      {
+        path: "/services/endoflease",
+        element: <InternalPage page="endoflease" />,
+        errorElement: <ErrorPage />
+      },
+      {
+        path: "/services/spring",
+        element: <InternalPage page="spring" />,
+        errorElement: <ErrorPage />
+      }
     ]
   },
   { path: "*", element: <ErrorPage /> }

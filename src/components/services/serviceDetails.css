@@ -1,0 +1,26 @@
+.list-details {
+  margin-top: 10px;
+}
+.title-details {
+  display: flex;
+}
+
+.list-details i {
+  color: #4eb39a;
+  margin-right: 5px;
+}
+
+.list-details li {
+  list-style: none;
+  display: block;
+  margin-left: 25px;
+}
+
+.details-options {
+  margin: 15px 0;
+}
+
+.details-options span {
+  text-decoration: underline;
+  color: #4eb39a;
+}

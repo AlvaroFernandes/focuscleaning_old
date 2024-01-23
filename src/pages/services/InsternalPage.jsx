@@ -1,20 +1,21 @@
 import { useEffect, useState } from "react";
-import { Breadcrumbs, HeaderArea, ServicesInfo } from "../components";
+import { Breadcrumbs, HeaderArea, ServiceDetails } from "../../components";
 import axios from "axios";
 
-const Services = () => {
+const InternalPage = ({ page }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState({});
-
   useEffect(() => {
     axios
-      .get("/data/services.json")
+      .get("/data/details.json")
       .then((res) => {
-        setData(res.data);
+        const x = res.data;
+        setData(x);
         setIsLoading(false);
       })
       .catch((err) => console.log(err));
   }, []);
+
   return (
     <>
       <HeaderArea />
@@ -22,10 +23,10 @@ const Services = () => {
       {isLoading ? (
         <div className="loader"></div>
       ) : (
-        <ServicesInfo data={data} />
+        <ServiceDetails data={data} page={page} />
       )}
     </>
   );
 };
 
-export default Services;
+export default InternalPage;

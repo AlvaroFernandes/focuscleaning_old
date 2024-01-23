@@ -1,0 +1,102 @@
+{
+  "basic": {
+    "title": "Basic Cleaning",
+    "img": "/assets/img/photos/basic/photo1.jpeg",
+    "price": 0,
+    "intro": [
+      "When you book our apartment or house cleaning services in Sydney, our system takes into account the overall size of your property to ensure our cleaners can provide a thorough and comprehensive clean.",
+      "We determine the size of your home based on the number of bedrooms and bathrooms. Additionally, you have the option to add any optional extras to customise your service according to your specific needs."
+    ],
+    "subtitle": "Our general basic cleaning services include:",
+    "services": [
+      {
+        "title": "Bedrooms & Living Areas:",
+        "icon": "fa fa-bed",
+        "details": [
+          "Straighten the beds;",
+          "Dust and wipe down furniture;",
+          "Dust and dry wipe electronics;",
+          "Clean the floors"
+        ]
+      },
+      {
+        "title": "Kitchen:",
+        "icon": "fa fa-sink",
+        "details": [
+          "Cleaning the exterior of the stove and oven;",
+          "Sanitising the splash-back and bench-top;",
+          "Turning on the dishwasher;",
+          "Cleaning sinks and taps;",
+          "Wiping down cabinet and appliance exteriors;",
+          "Cleaning the microwave;",
+          "Mopping the floor."
+        ]
+      },
+      {
+        "title": "Bathroom:",
+        "icon": "fa fa-bath",
+        "details": [
+          "Clean and sanitise the bathtub and recess;",
+          "Scrub and sanitise toilets;",
+          "Polish sinks and taps;",
+          "Clean mirrors and cabinet exteriors;",
+          "Mop and sanitise."
+        ]
+      }
+    ],
+    "options": "Change sheets and towels and put them in the laundry. Consult us for more information."
+  },
+  "commercial": {
+    "title": "Commercial Cleaning",
+    "img": "/assets/img/photos/commercial/photo1.jpeg",
+    "price": 70,
+    "intro": [
+      "If your company values ​​maintaining a good image for its customers and recognises the benefits of a good working environment for its employees, Focus Cleaning – Office Cleaning service is the ideal service for you.",
+      "For us the details are the difference to do well.",
+      "The cleaning methodology, the training of the staff and the quality of the products and equipment used allows us to achieve higher results than the competition and usually in less time.",
+      "In addition to cleaning, if desired, Focus Office Cleaning service can take care of the various logistical aspects of maintaining your office, such as the supply and replacement of consumables.",
+      "Ask us for a free quote and get to know in depth the Office Cleaning service we offer."
+    ],
+    "subtitle": "Our general commercial cleaning services include:",
+    "services": [
+      {
+        "title": "General Areas:",
+        "icon": "",
+        "details": [
+          "Empty trash cans and replace lines;",
+          "Dust and wipe surfaces;",
+          "Vacuum or sweep and mop the floors;",
+          "Clean glass surfaces."
+        ]
+      },
+      {
+        "title": "Restrooms:",
+        "icon": "",
+        "details": [
+          "Clean and disinfect toilets, sinks, and counters;",
+          "Refill soap, hand towels, and toilet paper;",
+          "Empty and sanitise bins;",
+          "Clean the mirror;",
+          "Sweep or vacuum and mop floors."
+        ]
+      },
+      {
+        "title": "Kitchen / Break Room:",
+        "icon": "",
+        "details": [
+          "Wipe surfaces and electronics;",
+          "Vacuum or sweep and mop floors;",
+          "Clean shared equipment."
+        ]
+      },
+      {
+        "title": "Hallways / Common Areas:",
+        "icon": "",
+        "details": [
+          "Vacuum or sweep and mop floors;",
+          "Wipe hadrais and surfaces."
+        ]
+      }
+    ]
+  }
+}
