@@ -14,7 +14,7 @@ body {
 }
 
 body {
-  font-family: "Outfit", sans-serif;
+  font-family: "aileron", san-sarif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -31,7 +31,7 @@ h4,
 h5,
 h6 {
   position: relative;
-  font-family: "Outfit", sans-serif;
+  font-family: "crushed", san-sarif;
   font-weight: 400;
   margin: 0;
   color: #4eb39a;
@@ -1658,7 +1658,7 @@ input.form-control {
 .contact-info i {
   color: #4eb39a;
   font-size: 20px;
-  margin-right: 2px;
+  margin: 0 10px;
 }
 
 .site-info .social-area {
@@ -3819,6 +3819,14 @@ ul.partner-social li a {
   text-align: center;
   position: relative;
 }
+.breadcrumb-img-contact {
+  background-image: url(/assets/img/breadcrumb/contact-bg.jpeg);
+}
+
+.breadcrumb-img-about {
+  background-image: url(/assets/img/breadcrumb/about-bg.png);
+}
+
 .breadcrumb-area h2 {
   font-size: 56px;
   line-height: 56px;
@@ -4377,6 +4385,9 @@ ul.partner-social li a {
   margin-bottom: 20px;
 }
 
+.modal-form {
+  height: 70%;
+}
 /*
  
  

@@ -1,4 +1,6 @@
+import { Swiper, SwiperSlide } from "swiper/react";
 import { PartnerCard } from "./PartnerCard";
+import { Pagination } from "swiper/modules";
 
 const Partners = ({ type, data }) => {
   const partners = data.partners;
@@ -28,16 +30,33 @@ const Partners = ({ type, data }) => {
           </div>
         ) : null}
         <div className="row">
-          {partners.length > 0 &&
-            (!type ? partners : partners.slice(0, 4)).map((item, i) => (
-              <div
-                key={item.id}
-                className="col-lg-3 col-md-6 wow fadeInLeft"
-                data-wow-delay={`${index(i) * 100}ms`}
-              >
-                <PartnerCard partner={item} i={i} />
-              </div>
-            ))}
+          <Swiper
+            speed={1500}
+            modules={[Pagination]}
+            pagination={{ clickable: true }}
+            breakpoints={{
+              0: {
+                slidesPerView: 1,
+                spaceBetween: 30
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 30
+              },
+              1100: {
+                slidesPerView: 3,
+                spaceBetween: 30
+              }
+            }}
+            className="testimonial-carousel"
+          >
+            {partners.length > 0 &&
+              (!type ? partners : partners.slice(0, 4)).map((item, i) => (
+                <SwiperSlide key={{ i }}>
+                  <PartnerCard partner={item} i={i} />
+                </SwiperSlide>
+              ))}
+          </Swiper>
         </div>
       </div>
     </div>

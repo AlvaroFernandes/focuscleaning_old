@@ -38,12 +38,11 @@ const Footer = () => {
               <ul>
                 <li>
                   <div className="social-area">
-                    <a href="#">
-                      <FontAwesomeIcon
-                        icon={faFacebook}
-                        className="footer-icon"
-                      />{" "}
-                      Facebook
+                    <a
+                      href="https://www.facebook.com/focuscleaningsydney.com.au/"
+                      target="_blank"
+                    >
+                      <i className="footer-icon fa fa-facebook" /> Facebook
                     </a>
                     <a href="#">
                       <FontAwesomeIcon
