@@ -13,3 +13,4 @@ export { default as Partners } from "./partners/Partners";
 export { default as ServicesInfo } from "./services/ServicesInfo";
 export { default as ServiceDetails } from "./services/ServiceDetails";
 export { default as Testimonial } from "./testimonial/Testimonial";
+export { default as ContactSection } from "./contact/ContactSection";

@@ -38,6 +38,22 @@ const ServiceDetails = ({ data, page }) => {
           }
         }
         break;
+      case "endoflease":
+        {
+          {
+            setDetails(data.endoflease);
+            setLoading(false);
+          }
+        }
+        break;
+      case "spring":
+        {
+          {
+            setDetails(data.spring);
+            setLoading(false);
+          }
+        }
+        break;
       default:
         break;
     }

@@ -14,6 +14,13 @@ const generateBreadcrumbs = (routePath) => {
     });
   }
 
+  if (currPath === "contact") {
+    return (path = {
+      title: "Contact us",
+      bread: "Contact us"
+    });
+  }
+
   if (currPath === "services" && idSlug === undefined) {
     return (path = {
       title: "Services",

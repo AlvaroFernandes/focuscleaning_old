@@ -101,27 +101,27 @@ const HeaderArea = () => {
                                 </Link>
                               </li>
                               <li>
-                                <Link to="/services/elc">
+                                <Link to="/services/endoflease">
                                   End of Lease Cleaning
                                 </Link>
                               </li>
                               <li>
-                                <Link to="/services/Spring">
+                                <Link to="/services/spring">
                                   Spring Cleaning
                                 </Link>
                               </li>
                             </ul>
                           </li>
                           <li className="nav-item">
-                            <a
+                            <Link
                               onMouseOver={() => setActiveMenu("contact")}
                               className={`nav-link ${
                                 activeMenu === "contact" ? "active" : ""
                               }`}
-                              href="#"
+                              to="/contact"
                             >
                               Contact
-                            </a>
+                            </Link>
                           </li>
                         </ul>
                       </div>
