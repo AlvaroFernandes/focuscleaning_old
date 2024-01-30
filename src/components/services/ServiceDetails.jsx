@@ -1,11 +1,14 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./serviceDetails.css";
-import Modal from "../modal/Modal";
+import { Modal } from "react-bootstrap";
+import ModalFormQuote from "../modal/ModalFormQuote";
+import ModalFormAvailability from "../modal/ModalFormAvailability";
 
 const ServiceDetails = ({ data, page }) => {
   const [loading, setLoading] = useState(true);
   const [details, setDetails] = useState({});
-  const [showModal, setShowModal] = useState(false);
+  const [modalA, setModalA] = useState(false);
+  const [modalQ, setModalQ] = useState(false);
 
   useEffect(() => {
     switch (page) {
@@ -61,6 +64,11 @@ const ServiceDetails = ({ data, page }) => {
     }
   }, [page]);
 
+  const handleCloseQ = () => setModalQ(false);
+  const handleCloseA = () => setModalA(false);
+  const handleShowQ = () => setModalQ(true);
+  const handleShowA = () => setModalA(true);
+
   return (
     <>
       {loading ? (
@@ -97,15 +105,15 @@ const ServiceDetails = ({ data, page }) => {
                                 <p>From ${details.price} / per hour.</p>
                               ) : (
                                 <button
-                                  onClick={() => setShowModal((p) => !p)}
+                                  onClick={handleShowQ}
                                   className="main-btn small-btn"
                                 >
-                                  Request a Quote
+                                  Check prices
                                 </button>
                               )}
                             </div>
                             <div
-                              onClick={() => setShowModal((p) => !p)}
+                              onClick={handleShowA}
                               className="main-btn small-btn"
                             >
                               Check Availability
@@ -151,9 +159,32 @@ const ServiceDetails = ({ data, page }) => {
                 )}
               </div>
             </div>
-            {showModal ? (
-              <Modal setShowModal={setShowModal} page={details.title} />
-            ) : null}
+            <Modal
+              show={modalA}
+              centered
+              onHide={handleCloseA}
+              animation={true}
+            >
+              <Modal.Header className="modal-header" closeButton>
+                <Modal.Title>Check the Availability</Modal.Title>
+              </Modal.Header>
+              <Modal.Body className="modal-body">
+                <ModalFormAvailability data={page} />
+              </Modal.Body>
+            </Modal>
+            <Modal
+              show={modalQ}
+              centered
+              onHide={handleCloseQ}
+              animation={true}
+            >
+              <Modal.Header className="modal-header" closeButton>
+                <Modal.Title>Get a Quote</Modal.Title>
+              </Modal.Header>
+              <Modal.Body className="modal-body">
+                <ModalFormQuote />
+              </Modal.Body>
+            </Modal>
           </div>
         </div>
       )}

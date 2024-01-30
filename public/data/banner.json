@@ -2,7 +2,7 @@
   "banner": [
     {
       "id": "b1",
-      "img": "/assets/img/slider/1.jpg",
+      "img": "/assets/img/backgrounds/basic-bg.jpg",
       "heading": "House Cleaning",
       "motive": {
         "m1": "We provide best satisfied",
@@ -16,7 +16,7 @@
     },
     {
       "id": "b2",
-      "img": "/assets/img/slider/2.jpeg",
+      "img": "/assets/img/backgrounds/commercial-bg.jpeg",
       "heading": "Commercial Cleaning",
       "motive": {
         "m1": "We maintain your",
@@ -27,6 +27,62 @@
         "t2": "Our team will leave a clean and organised environment, perfect for your workflow. "
       },
       "link": "/services/commercial"
+    },
+    {
+      "id": "b3",
+      "img": "/assets/img/backgrounds/construction-bg.jpeg",
+      "heading": "Construction Cleaning",
+      "motive": {
+        "m1": "We make your",
+        "m2": "house ready for you to move in"
+      },
+      "title": {
+        "t1": "Experienced, professional commercial cleaners specialising in offices. ",
+        "t2": "Our team will leave a clean and organised environment, perfect for your workflow. "
+      },
+      "link": "/services/construction"
+    },
+    {
+      "id": "b4",
+      "img": "/assets/img/backgrounds/premiun-bg.jpeg",
+      "heading": "Premiun Cleaning",
+      "motive": {
+        "m1": "We give a more",
+        "m2": "detailed clean to your house"
+      },
+      "title": {
+        "t1": "Experienced, professional commercial cleaners specialising in offices. ",
+        "t2": "Our team will leave a clean and organised environment, perfect for your workflow. "
+      },
+      "link": "/services/premiun"
+    },
+    {
+      "id": "b5",
+      "img": "/assets/img/backgrounds/endoflease-bg.jpeg",
+      "heading": "End of Lease Cleaning",
+      "motive": {
+        "m1": "We make sure that",
+        "m2": "you will be satisfied!"
+      },
+      "title": {
+        "t1": "Experienced, professional commercial cleaners specialising in offices. ",
+        "t2": "Our team will leave a clean and organised environment, perfect for your workflow. "
+      },
+      "link": "/services/endoflease"
+    },
+    {
+      "id": "b6",
+      "img": "/assets/img/backgrounds/spring-bg.jpeg",
+      "heading": "Spring Cleaning",
+      "motive": {
+        "m1": "We give a more",
+        "m2": "detailed clean to your house"
+      },
+      "title": {
+        "t1": "Experienced, professional commercial cleaners specialising in offices. ",
+        "t2": "Our team will leave a clean and organised environment, perfect for your workflow. "
+      },
+      "link": "/services/sping"
     }
   ]
 }

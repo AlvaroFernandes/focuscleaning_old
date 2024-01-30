@@ -1,0 +1,86 @@
+{
+  "basic": {
+    "i1": {
+      "img": "/assets/img/photos/basic/phot1.png",
+      "name": ""
+    },
+    "i2": {
+      "img": "/assets/img/photos/basic/phot1.png",
+      "name": ""
+    },
+    "i3": {
+      "img": "/assets/img/photos/basic/phot1.png",
+      "name": ""
+    }
+  },
+  "commercial": {
+    "i1": {
+      "img": "/assets/img/photos/commercial/phot1.png",
+      "name": ""
+    },
+    "i2": {
+      "img": "/assets/img/photos/commercial/phot1.png",
+      "name": ""
+    },
+    "i3": {
+      "img": "/assets/img/photos/commercial/phot1.png",
+      "name": ""
+    }
+  },
+  "construction": {
+    "i1": {
+      "img": "/assets/img/photos/construction/phot1.png",
+      "name": ""
+    },
+    "i2": {
+      "img": "/assets/img/photos/construction/phot1.png",
+      "name": ""
+    },
+    "i3": {
+      "img": "/assets/img/photos/construction/phot1.png",
+      "name": ""
+    }
+  },
+  "premiun": {
+    "i1": {
+      "img": "/assets/img/photos/premiun/phot1.png",
+      "name": ""
+    },
+    "i2": {
+      "img": "/assets/img/photos/premiun/phot1.png",
+      "name": ""
+    },
+    "i3": {
+      "img": "/assets/img/photos/premiun/phot1.png",
+      "name": ""
+    }
+  },
+  "endoflease": {
+    "i1": {
+      "img": "/assets/img/photos/endoflease/phot1.png",
+      "name": ""
+    },
+    "i2": {
+      "img": "/assets/img/photos/endoflease/phot1.png",
+      "name": ""
+    },
+    "i3": {
+      "img": "/assets/img/photos/endoflease/phot1.png",
+      "name": ""
+    }
+  },
+  "spring": {
+    "i1": {
+      "img": "/assets/img/photos/spring/phot1.png",
+      "name": ""
+    },
+    "i2": {
+      "img": "/assets/img/photos/spring/phot1.png",
+      "name": ""
+    },
+    "i3": {
+      "img": "/assets/img/photos/spring/phot1.png",
+      "name": ""
+    }
+  }
+}

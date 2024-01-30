@@ -3762,6 +3762,7 @@ p.privacy {
   margin: auto;
   width: 100%;
   text-align: center;
+  max-height: 60%;
 }
 .partner-content {
   background: #fff;
@@ -3811,7 +3812,7 @@ ul.partner-social li a {
 .breadcrumb-area {
   background-size: cover;
   background-position: center;
-  background-image: url(/assets/img/breadcrumb/bread-bg.jpg);
+  background-image: url(/assets/img/backgrounds/bread-bg.jpg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3820,11 +3821,19 @@ ul.partner-social li a {
   position: relative;
 }
 .breadcrumb-img-contact {
-  background-image: url(/assets/img/breadcrumb/contact-bg.jpeg);
+  background-image: url(/assets/img/backgrounds/contact-bg.jpeg);
 }
 
 .breadcrumb-img-about {
-  background-image: url(/assets/img/breadcrumb/about-bg.png);
+  background-image: url(/assets/img/backgrounds/about-bg.png);
+}
+
+.breadcrumb-img-basic {
+  background-image: url(/assets/img/backgrounds/basic-bg.jpg);
+}
+
+.breadcrumb-img-commercial {
+  background-image: url(/assets/img/backgrounds/commercial-bg.jpeg);
 }
 
 .breadcrumb-area h2 {
@@ -4331,7 +4340,9 @@ ul.partner-social li a {
 }
 
 .contact-form label {
-  color: #fff;
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  color: #808080;
   margin-bottom: 8px;
 }
 

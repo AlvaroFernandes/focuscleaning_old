@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { PartnerCard } from "./PartnerCard";
-import { Pagination } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 
 const Partners = ({ type, data }) => {
   const partners = data.partners;
@@ -32,7 +32,10 @@ const Partners = ({ type, data }) => {
         <div className="row">
           <Swiper
             speed={1500}
-            modules={[Pagination]}
+            modules={[Pagination, Autoplay]}
+            slidesPerView={3}
+            loop={true}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
             pagination={{ clickable: true }}
             breakpoints={{
               0: {
@@ -52,7 +55,7 @@ const Partners = ({ type, data }) => {
           >
             {partners.length > 0 &&
               (!type ? partners : partners.slice(0, 4)).map((item, i) => (
-                <SwiperSlide key={{ i }}>
+                <SwiperSlide key={item.id}>
                   <PartnerCard partner={item} i={i} />
                 </SwiperSlide>
               ))}

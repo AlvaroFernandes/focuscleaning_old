@@ -10,15 +10,21 @@ import axios from "axios";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const [data, setData] = useState({});
+  const [dataBanner, setDataBanner] = useState({});
+  const [dataCards, setDataCards] = useState({});
+
+  const urls = ["/data/banner.json", "/data/cards.json"];
 
   useEffect(() => {
     axios
-      .get("/data/banner.json")
-      .then((res) => {
-        setData(res.data);
-        setIsLoading(false);
-      })
+      .all(urls.map((url) => axios.get(url)))
+      .then(
+        axios.spread(({ data: Banner }, { data: ServiceCards }) => {
+          setDataBanner(Banner);
+          setDataCards(ServiceCards);
+          setIsLoading(false);
+        })
+      )
       .catch((err) => console.log(err));
   }, []);
 
@@ -29,9 +35,12 @@ const Home = () => {
       {isLoading ? (
         <div className="loader"></div>
       ) : (
-        <HeroArea type={true} data={data} />
+        <>
+          <HeroArea type={true} data={dataBanner} />
+          <Cards data={dataCards} />
+        </>
       )}
-      <Cards />
+
       <Testimonial />
     </>
   );

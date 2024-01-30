@@ -4,31 +4,10 @@ import {
   faBuilding,
   faTrowelBricks
 } from "@fortawesome/free-solid-svg-icons";
-const cards = [
-  {
-    id: "p1",
-    heading: "Residencial Solution",
-    title:
-      "Industry is main lorem ipsum dolor amet, consectetur adipisicing elit.",
-    icon: faHouse
-  },
-  {
-    id: "p2",
-    heading: "Commercial Solutions",
-    title:
-      "Industry is main lorem ipsum dolor amet, consectetur adipisicing elit.",
-    icon: faBuilding
-  },
-  {
-    id: "p3",
-    heading: "Constuction Solutions",
-    title:
-      "Industry is main lorem ipsum dolor amet, consectetur adipisicing elit.",
-    icon: faTrowelBricks
-  }
-];
+import { Link } from "react-router-dom";
 
-const Cards = () => {
+const Cards = ({ data }) => {
+  const cards = data.ServiceCards;
   return (
     <>
       <div className="promo-area">
@@ -36,19 +15,19 @@ const Cards = () => {
           <div className="row" v-if="promo.length > 0">
             {cards.length > 0 &&
               cards.map((item, i) => (
-                <div key={item.id} className="col-lg-4 col-12">
+                <Link to={item.link} key={item.id} className="col-lg-4 col-12">
                   <div
                     className={`single-promo-item mb-50 ${
                       i === 1 ? "spro" : ""
                     }`}
                   >
                     <div className="promo-icon">
-                      <FontAwesomeIcon icon={item.icon} className="card-icon" />
+                      <i className={`card-icon fa-solid ${item.icon}`}></i>
                     </div>
                     <h5>{item.heading}</h5>
                     <p>{item.title}</p>
                   </div>
-                </div>
+                </Link>
               ))}
           </div>
         </div>

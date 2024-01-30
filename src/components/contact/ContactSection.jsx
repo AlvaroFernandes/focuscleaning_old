@@ -30,7 +30,7 @@ const ContactSection = () => {
             <div className="col-xl-6 col-lg-6 col-12">
               <div className="contact-form dark-bg">
                 <div className="section-title">
-                  <h2 className="text-white">Lets talk...</h2>
+                  <h2>Lets talk...</h2>
                 </div>
                 <form onSubmit={handleSubmit(onSubmit)}>
                   <div className="row">
@@ -39,32 +39,36 @@ const ContactSection = () => {
                       <input
                         type="text"
                         placeholder="Your full name"
-                        {...register("name")}
+                        {...register("name", { required: true })}
                       />
+                      {errors.name && <span>This field is required</span>}
                     </div>
                     <div className="col-md-6">
                       <label>Email Address*</label>
                       <input
                         type="email"
                         placeholder="E-mail Address"
-                        {...register("email")}
+                        {...register("email", { required: true })}
                       />
+                      {errors.email && <span>This field is required</span>}
                     </div>
                     <div className="col-md-6">
                       <label>Phone Number*</label>
                       <input
                         type="number"
                         placeholder="Phone number"
-                        {...register("phone")}
+                        {...register("phone", { required: true })}
                       />
+                      {errors.phone && <span>This field is required</span>}
                     </div>
                     <div className="col-12">
                       <label>Subject*</label>
                       <input
                         type="text"
                         placeholder="Subject"
-                        {...register("subject")}
+                        {...register("subject", { required: true })}
                       />
+                      {errors.subject && <span>This field is required</span>}
                     </div>
                     <div className="col-12">
                       <label>Message*</label>
@@ -74,8 +78,9 @@ const ContactSection = () => {
                         cols={30}
                         rows={10}
                         placeholder="Write here..."
-                        {...register("message")}
+                        {...register("message", { required: true })}
                       />
+                      {errors.message && <span>This field is required</span>}
                     </div>
                   </div>
                   <button type="submit" className="bordered-btn">

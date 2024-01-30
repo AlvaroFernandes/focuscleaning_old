@@ -12,12 +12,12 @@ const HeroArea = ({ type, data }) => {
           modules={[Autoplay]}
           slidesPerView={1}
           loop={true}
-          speed={2500}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          speed={5000}
+          autoplay={{ delay: 5000, disableOnInteraction: false }}
           id="home"
           className="homepage-slides"
         >
-          {(type ? banner.slice(0, 2) : banner.slice(2)).map((item) => (
+          {(type ? banner.slice(0, 6) : banner.slice(2)).map((item) => (
             <SwiperSlide key={item.id} className="single-slide-item">
               <div
                 className="image-layer"
