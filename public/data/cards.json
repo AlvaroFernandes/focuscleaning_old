@@ -4,21 +4,21 @@
       "id": "p1",
       "heading": "Residencial Solution",
       "title": "Industry is main lorem ipsum dolor amet, consectetur adipisicing elit.",
-      "icon": "fa-house",
+      "icon": "fa fa-house",
       "link": "/services/basic"
     },
     {
       "id": "p2",
       "heading": "Commercial Solutions",
       "title": "Industry is main lorem ipsum dolor amet, consectetur adipisicing elit.",
-      "icon": "fa-building",
+      "icon": "fa-solid fa-building",
       "link": "/services/commercial"
     },
     {
       "id": "p3",
       "heading": "Constuction Solutions",
       "title": "Industry is main lorem ipsum dolor amet, consectetur adipisicing elit.",
-      "icon": "fa-helmet-safety",
+      "icon": "fa fa-helmet-safety",
       "link": "/services/construction"
     }
   ]

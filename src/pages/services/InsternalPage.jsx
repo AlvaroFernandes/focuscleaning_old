@@ -1,18 +1,29 @@
 import { useEffect, useState } from "react";
-import { Breadcrumbs, HeaderArea, ServiceDetails } from "../../components";
+import {
+  Breadcrumbs,
+  Gallery,
+  HeaderArea,
+  ServiceDetails
+} from "../../components";
 import axios from "axios";
 
 const InternalPage = ({ page }) => {
   const [isLoading, setIsLoading] = useState(true);
-  const [data, setData] = useState({});
+  const [dataDetails, setDataDetails] = useState({});
+  const [dataGallery, setDataGallery] = useState({});
+
+  const urls = ["/data/details.json", "/data/gallery.json"];
+
   useEffect(() => {
     axios
-      .get("/data/details.json")
-      .then((res) => {
-        const x = res.data;
-        setData(x);
-        setIsLoading(false);
-      })
+      .all(urls.map((url) => axios.get(url)))
+      .then(
+        axios.spread(({ data: Details }, { data: GalleryImages }) => {
+          setDataDetails(Details);
+          setDataGallery(GalleryImages);
+          setIsLoading(false);
+        })
+      )
       .catch((err) => console.log(err));
   }, []);
 
@@ -23,7 +34,10 @@ const InternalPage = ({ page }) => {
       {isLoading ? (
         <div className="loader"></div>
       ) : (
-        <ServiceDetails data={data} page={page} />
+        <>
+          <ServiceDetails data={dataDetails} page={page} />
+          <Gallery page={page} data={dataGallery} />
+        </>
       )}
     </>
   );

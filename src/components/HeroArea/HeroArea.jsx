@@ -34,7 +34,7 @@ const HeroArea = ({ type, data }) => {
                     >
                       <div className="section-title col-12 col-lg-6">
                         <h6>{item.heading}</h6>
-                        <h1>
+                        <h1 style={{ color: `${item.color}` }}>
                           {item.motive.m1}
                           <br />
                           <b>{item.motive.m2}</b>

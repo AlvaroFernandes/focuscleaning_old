@@ -3,7 +3,8 @@
     {
       "id": "b1",
       "img": "/assets/img/backgrounds/basic-bg.jpg",
-      "heading": "House Cleaning",
+      "color": "#fff",
+      "heading": "Basic Cleaning",
       "motive": {
         "m1": "We provide best satisfied",
         "m2": "work for your house"
@@ -16,7 +17,8 @@
     },
     {
       "id": "b2",
-      "img": "/assets/img/backgrounds/commercial-bg.jpeg",
+      "img": "/assets/img/backgrounds/commercial-bg.jpg",
+      "color": "#fff",
       "heading": "Commercial Cleaning",
       "motive": {
         "m1": "We maintain your",
@@ -30,7 +32,8 @@
     },
     {
       "id": "b3",
-      "img": "/assets/img/backgrounds/construction-bg.jpeg",
+      "img": "/assets/img/backgrounds/construction-bg.png",
+      "color": "#fff",
       "heading": "Construction Cleaning",
       "motive": {
         "m1": "We make your",
@@ -44,8 +47,9 @@
     },
     {
       "id": "b4",
-      "img": "/assets/img/backgrounds/premiun-bg.jpeg",
-      "heading": "Premiun Cleaning",
+      "img": "/assets/img/backgrounds/premium-bg.jpg",
+      "heading": "premium Cleaning",
+      "color": "#fff",
       "motive": {
         "m1": "We give a more",
         "m2": "detailed clean to your house"
@@ -54,11 +58,12 @@
         "t1": "Experienced, professional commercial cleaners specialising in offices. ",
         "t2": "Our team will leave a clean and organised environment, perfect for your workflow. "
       },
-      "link": "/services/premiun"
+      "link": "/services/premium"
     },
     {
       "id": "b5",
-      "img": "/assets/img/backgrounds/endoflease-bg.jpeg",
+      "img": "/assets/img/backgrounds/endoflease-bg.png",
+      "color": "#fff",
       "heading": "End of Lease Cleaning",
       "motive": {
         "m1": "We make sure that",
@@ -72,7 +77,8 @@
     },
     {
       "id": "b6",
-      "img": "/assets/img/backgrounds/spring-bg.jpeg",
+      "img": "/assets/img/backgrounds/spring-bg.png",
+      "color": "#fff",
       "heading": "Spring Cleaning",
       "motive": {
         "m1": "We give a more",
@@ -82,7 +88,7 @@
         "t1": "Experienced, professional commercial cleaners specialising in offices. ",
         "t2": "Our team will leave a clean and organised environment, perfect for your workflow. "
       },
-      "link": "/services/sping"
+      "link": "/services/spring"
     }
   ]
 }

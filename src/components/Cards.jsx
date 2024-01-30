@@ -1,9 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHouse,
-  faBuilding,
-  faTrowelBricks
-} from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 const Cards = ({ data }) => {
@@ -22,7 +16,7 @@ const Cards = ({ data }) => {
                     }`}
                   >
                     <div className="promo-icon">
-                      <i className={`card-icon fa-solid ${item.icon}`}></i>
+                      <i className="fa fa-house"></i>
                     </div>
                     <h5>{item.heading}</h5>
                     <p>{item.title}</p>

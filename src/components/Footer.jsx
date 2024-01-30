@@ -17,10 +17,12 @@ const Footer = () => {
             <div className="col-lg-2 col-md-6">
               <h5>Contact</h5>
               <div className="company-email">
-                <a href="#">contact@focuscleaning.com.au</a>
+                <Link to="mailto:contact@focuscleaning.com.au">
+                  contact@focuscleaning.com.au
+                </Link>
               </div>
               <div className="phone-number">
-                <p>0444 444 444</p>
+                <Link to="tel:0414 072 701">0414 072 701</Link>
               </div>
             </div>
             <div className="col-lg-2 offset-lg-1 col-md-6 com-sm-12">
@@ -42,9 +44,16 @@ const Footer = () => {
                       href="https://www.facebook.com/focuscleaningsydney.com.au/"
                       target="_blank"
                     >
-                      <i className="footer-icon fa fa-facebook" /> Facebook
+                      <FontAwesomeIcon
+                        className="footer-icon "
+                        icon={faFacebook}
+                      />{" "}
+                      Facebook
                     </a>
-                    <a href="#">
+                    <a
+                      href="https://www.instagram.com/focus_cleaning/"
+                      target="_blank"
+                    >
                       <FontAwesomeIcon
                         icon={faInstagram}
                         className="footer-icon"

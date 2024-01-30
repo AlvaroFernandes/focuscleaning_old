@@ -14,3 +14,4 @@ export { default as ServicesInfo } from "./services/ServicesInfo";
 export { default as ServiceDetails } from "./services/ServiceDetails";
 export { default as Testimonial } from "./testimonial/Testimonial";
 export { default as ContactSection } from "./contact/ContactSection";
+export { default as Gallery } from "./gallery/Gallery";

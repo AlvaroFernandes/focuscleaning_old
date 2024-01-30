@@ -12,9 +12,11 @@ const HeaderTop = () => {
             <div className="col-lg-6 col-md-12 col-sm-12">
               <div className="contact-info">
                 <i className="fa fa-envelope"></i>
-                contact@focuscleaningsydney.com.au |
-                <i className="fa fa-phone"></i>
-                0414 072 701
+                <Link to="mailto:contact@focuscleaning.com.au">
+                  contact@focuscleaning.com.au
+                </Link>{" "}
+                |<i className="fa fa-phone"></i>
+                <Link to="tel:0414 072 701">0414 072 701</Link>
               </div>
             </div>
             <div className="col-lg-6 col-md-12 col-sm-12 text-end">
