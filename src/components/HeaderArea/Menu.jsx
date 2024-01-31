@@ -16,7 +16,7 @@ const Menu = ({ menu, setShowNav }) => {
               className="mobile-sub-nav-toggler"
               onClick={() => setHomeSubMenu((p) => !p)}
             >
-              <i className="las la-angle-down"></i>
+              <i className="fa fa-angle-down"></i>
             </button>
           )}
         </div>

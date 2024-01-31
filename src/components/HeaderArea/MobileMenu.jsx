@@ -23,27 +23,27 @@ const data = [
       {
         id: "c1",
         text: "Basic Cleaning",
-        link: "/basic"
+        link: "/services/basic"
       },
       {
         id: "c2",
         text: "Commercial Cleaning",
-        link: "/commercial"
+        link: "/services/commercial"
       },
       {
         id: "c3",
         text: "Construction Cleaning",
-        link: "/construction"
+        link: "/services/construction"
       },
       {
         id: "c4",
         text: "Premiun Cleaning",
-        link: "/premiun"
+        link: "/services/premiun"
       },
       {
         id: "c5",
         text: "End of Lease Cleaning",
-        link: "/elc"
+        link: "/services/endoflease"
       },
       {
         id: "c6",
@@ -55,7 +55,7 @@ const data = [
   {
     id: "m4",
     text: "Contact us",
-    link: "#",
+    link: "/contact",
     dropdown: []
   }
 ];
